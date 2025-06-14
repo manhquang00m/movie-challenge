@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 - [x] Implement lazy load image.
 - [x] Customize the highlight and selection effect of the cell.
 - [x] Improve UX loading by skeleton loading.
-- [] Enhance responsive.
+- [ ] Enhance responsive.
 
 The following **additional** features are implemented:
 
