@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$desktop-width: 1024px;  
+$primary-color: #e50914; // Màu chính
+$secondary-color: white; // Màu phụ
+$bg-color: black; // Màu nhấn mạnh
+
+/* Additional Breakpoints */
+$sm-width: 640px;
+$md-width: 768px;
+$lg-width: 1024px;
+
+@mixin sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+/* Flexbox Mixins */
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* Grid Mixins */
+@mixin grid($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+
+/* Container Mixin */
+@mixin container {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+  background-color: $bg-color;
+
+  @include md {
+    padding: 32px;
+  }
+}
+
+.wrapper {
+  @include container
+}
+
+.title {
+  font-size: 24px;
+  color: $secondary-color;
+  margin-bottom: 16px;
+}
+
+.footer {
+  text-align: center;
+  color: $secondary-color;
+  font-size: 16px;
+  padding: 36px 0;
+  margin: 0;
+  background: $bg-color;
+}
+

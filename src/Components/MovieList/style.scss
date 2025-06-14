@@ -1,0 +1,32 @@
+@use '../../App.scss' as *;
+
+.movieList {
+    .grid {
+        @include grid(2, 1rem);
+
+        @include sm {
+            @include grid(3, 1rem);
+        }
+
+        @include md {
+            @include grid(4, 1.5rem);
+        }
+
+        @include lg {
+            @include grid(5, 24px);
+        }
+    }
+
+    .dataNotFound {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            color: $secondary-color;
+            padding: 0;
+            font-size: 18px;
+            padding-bottom: 12px;
+        }
+    }
+}

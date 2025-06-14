@@ -1,0 +1,145 @@
+@use '../../App.scss' as *;
+
+.movie-detail {
+    min-height: 100vh;
+    background-color: #0a1014;
+    color: white;
+
+    .backdrop {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to top, #0a1014 10%, transparent 90%);
+        }
+    }
+
+    .content {
+        margin-top: -300px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        gap: 3.5rem;
+        padding: 0 4rem;
+        max-width: 1400px;
+        margin-inline: auto;
+
+        .poster {
+            width: 320px;
+            height: 480px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+        }
+
+        .info {
+            flex: 1;
+            padding-top: 1rem;
+            
+            .title {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+            }
+
+            .meta {
+                display: flex;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+                color: #9ca3af;
+                font-size: 1.1rem;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+            }
+
+            .overview {
+                margin-bottom: 3rem;
+                line-height: 1.8;
+                font-size: 1.1rem;
+                color: #d1d5db;
+                max-width: 800px;
+            }
+
+            .details {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 2rem;
+                border-radius: 16px;
+
+                .detail-item {
+                    .label {
+                        color: #9ca3af;
+                        margin-bottom: 0.75rem;
+                        font-size: 0.9rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                    }
+
+                    div:not(.label) {
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $lg-width) {
+    .movie-detail {
+        .content {
+            flex-direction: column;
+            padding: 1rem 2rem;
+
+            .poster {
+                width: 280px;
+                height: 420px;
+                margin: 0 auto;
+            }
+
+            .info .title {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            .meta {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

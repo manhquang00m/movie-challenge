@@ -1,0 +1,28 @@
+@use  '../../App.scss' as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 0;
+
+    .button {
+        min-width: 40px;
+        
+        &.active {
+            background-color: color-mix(in srgb, $primary-color, black 10%);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    .ellipsis {
+        color: $secondary-color;
+        display: flex;
+        align-items: center;
+        padding: 0 0.5rem;
+    }
+}
