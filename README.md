@@ -1,4 +1,6 @@
-# Project - *Movies*
+# Project - *Movies* 
+https://movie-challenge-steel.vercel.app/
+
 ## Tech Stack
 - ReactJS + Typescript, Scss, ReactQuery
 
@@ -31,12 +33,8 @@ The following **additional** features are implemented:
 
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-> Please record screen to a GIF file and attach link here
+https://www.canva.com/design/DAGqYpY-Dx8/uaDYbZJ2tb4JYfi56L-_XQ/watch?utm_content=DAGqYpY-Dx8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h52eeba174e
 
 ## Submit
-
 **When you're done, send us back a link to a repository with your source code, with a description of what you've done and any build instructions in the readme!**
 
